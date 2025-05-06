@@ -1,1 +1,1 @@
-# Buy-me-coffees
+# Buy-me-coffee
