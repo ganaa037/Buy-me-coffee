@@ -18,7 +18,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
         </div>
 
       </div>
-      <div>{children}</div>
+      <div className="flex items-center justify-center w-1/2">{children}</div>
     </div>
   );
 }
