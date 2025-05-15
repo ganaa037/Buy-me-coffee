@@ -1,15 +1,25 @@
-import {
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import React from "react";
-import { FormInput } from "../_component/FormInput";
 
-export const Step1 = () => {
+"use client";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Dispatch, SetStateAction, useState } from "react";
+import { FormInput } from "../_component/FormInput";
+export const Step1 = ({ setStep }: { setStep: Dispatch<SetStateAction<number>> }) => {
+  const [username, setUsername] = useState<string>("")
+  const [error, setError] = useState<string>()
+
+
+  const handleSubmitUsername = () => {
+    setError(undefined)
+    console.log(username);
+    setStep(1)
+
+
+  }
   return (
-    <div className="">
+
+
+    <Card className="w-1/2 border-none shadow-none">
       <CardHeader className="flex flex-col gap-[6px] p-6">
         <CardTitle>Create Your Account</CardTitle>
         <CardDescription>Choose a username for your page</CardDescription>
@@ -19,9 +29,18 @@ export const Step1 = () => {
           label="username"
           type="username"
           placeholder="username"
-          error="The username is already taken"
+          error={error}
+          setChange={setUsername}
+
         />
       </CardContent>
-    </div>
+
+      <CardFooter className="flex justify-between">
+        <Button onClick={handleSubmitUsername} className="w-full">
+          Continue
+        </Button>
+      </CardFooter>
+    </Card>
+
   );
-};
+}
