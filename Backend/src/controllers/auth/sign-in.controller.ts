@@ -7,7 +7,7 @@ import { secret_key } from "../../utils/env";
 export const signIn = async (req: Request, res: Response) => {
 
     // const { email, password } = req.body
-    console.log(req.cookies, "cookie");
+    console.log(req.cookies, "cookiesd");
 
     const email = "gan31d3@gmail.com";
     const password = "password"
