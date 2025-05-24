@@ -1,6 +1,6 @@
 import React from "react";
-import { CreateProNav } from "../_component/CreateProNav";
 import { CreateproPage } from "../_component/CreateProPage";
+import { CreateProNav } from "./_component/CreateProNav";
 
 export default function page() {
   return (

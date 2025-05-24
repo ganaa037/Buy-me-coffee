@@ -16,6 +16,9 @@ export default function Page() {
     const handleClick = () => {
         router.push("sign-up")
     }
+    const handleOnclick = () => {
+        router.push("createProfile")
+    }
 
     return (<div className="h-screen gap-[248px] flex-col flex ">
         <div className="w-full justify-end flex pt-8">
@@ -35,7 +38,7 @@ export default function Page() {
             </CardContent>
             <CardFooter className="flex justify-between">
 
-                <Button className="w-full">Deploy</Button>
+                <Button onClick={handleOnclick} className="w-full">Continue</Button>
             </CardFooter>
         </Card>
     </div>
